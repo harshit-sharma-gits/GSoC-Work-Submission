@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSoC Work Submission: Harshit Sharma</title>
+    <style type="text/css">
+
+        body {
+            font-size: 1em;
+            font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            margin: 40px;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin: 80px;
+            min-width: 45em;
+            max-width: 70em;
+        }
+        a:link {
+            font-weight: bold;
+            text-decoration: none;
+            color: #dc3c01;
+        }
+        a:visited {
+            font-weight: bold;
+            text-decoration: none;
+            color: #892601;
+        }
+        a:hover, a:active {
+            text-decoration: underline;
+            color: #ff4500;
+        }
+        
+        hr {
+            border: dotted thin #e0e0e0;
+        }
+        h1 {
+            font-size: 1.4em;
+            border-bottom: dotted thin #e0e0e0;
+            margin-bottom: 45px;
+            margin-top: 30px;
+        }
+        h2 {
+            font-size: 1.2em;
+            border-bottom: dotted thin #e0e0e0;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1em;
+            border-bottom: none;
+            margin-bottom: 0px;
+        }
+        .button {
+            font-size: 1.0em;
+            font-family: serif;
+            font-style: italic;
+            color: #33583c;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        ul {
+            padding-left: 14px;
+        }
+        td a {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        td p {
+            padding-left: 50px;
+            padding-right: 30px;
+        }
+        tr:nth-child(even) {
+            background-color: #eee3d6;
+        }
+    </style>
+        
+</head>
+<body>
+
+    <h1 style="font-size: 30px;">
+        [GSoC 2022] Work Submission: Improving the Calendar Application
+    </h1>
+
+    <h1>Project Description</h1>
+
+    <p>
+        A Calendar application is a must have application for any operating system and is
+        beneficial for end users as well as developers. Having a feature-rich Calendar might
+        not sound like a big deal, but it can drastically impact your performance at work and
+        personal life.  
+    </p>
+
+    <p>
+        The basic idea of my project was to improve the Calendar Application, by implementing he the following features:
+
+        <br />
+
+        <ul>
+            <li>Filter Utility</li>
+            <li>Reminders Utility</li>
+            <li>Calendar Profiles (After some discussion, we decided not to work on this)</li>
+        </ul>
+
+        Hence, I ended up implementing the <b>Filters</b> and <b>Reminders</b>
+
+        <br />
+
+        My fork: <a href="https://github.com/harshit-sharma-gits/Calendar" target="_blank">https://github.com/harshit-sharma-gits/Calendar</a>
+
+    </p>
+
+    <h1>Work Done</h1>
+
+    <h2>Filter Utility</h2>
+
+    <p>
+        Issue: <a href="https://github.com/HaikuArchives/Calendar/issues/119" target="_blank">https://github.com/HaikuArchives/Calendar/issues/119</a> <br>
+
+        PR: <a href="https://github.com/HaikuArchives/Calendar/pull/121" target="_blank">https://github.com/HaikuArchives/Calendar/pull/121</a> <br><br>
+
+        In this PR, we implemented the Filter Feature. It's UI and working can be seen <a href="https://drive.google.com/file/d/1DIrfn43473RxbImjlKKm0K4hkmvPBYTp/view?usp=sharing" target="_blank">here.</a> <br>
+
+        So, now we can filter out the events as per the keywords entered.
+    </p>
+
+    <h2>Reminders</h2>
+
+    <p>
+        Issue: <a href="https://github.com/HaikuArchives/Calendar/issues/122" target="_blank">https://github.com/HaikuArchives/Calendar/issues/122</a> <br><br>
+
+        It was a more typical project and it required much more discussion, which we did on <a href="https://discuss.haiku-os.org/t/gsoc-22-project-improving-the-calendar-application/12139/40" target="_blank">this</a> thread and with my mentors on emails. <br><br>
+
+        We created a separate background application (<i>CalendarDaemon</i>) which: <br>
+
+        <ul>
+            <li>
+                Searches for the events and stores them in a list, and keep the list updated with adding/removing the events.
+            </li>
+            <li>
+                Then sends off an alert for the event, at the specified time
+            </li>
+        </ul>
+
+        We also did some changes in the UI of the main Calendar Application along with the existing data model. <br>
+        The new UI can be seen here: <a href="https://drive.google.com/file/d/1aNvUciZ1uMDbn8Sn6ROJzSOQgHjGxw4b/view?usp=sharing" target="_blank">https://drive.google.com/file/d/1aNvUciZ1uMDbn8Sn6ROJzSOQgHjGxw4b/view?usp=sharing</a> <br>
+
+    </p>
+
+    <h3>PRs</h3>
+
+    <p>
+        Initially we started with only one PR, and did everthing in it. Not so surprisingly, the PR got way too big to handle. So, we broke the work into multiple PRs. <br><br>
+
+        Here are the PRs: <br>
+
+        <table>
+            <tr>
+                <th>
+                    PR
+                </th>
+                <th>
+                    Short Description
+                </th>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/HaikuArchives/Calendar/pull/123" target="_blank">https://github.com/HaikuArchives/Calendar/pull/123</a></td>
+                <td><p>
+                    Initial PR
+                </p></td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/HaikuArchives/Calendar/pull/124" target="_blank">https://github.com/HaikuArchives/Calendar/pull/124</a></td>
+                <td><p>
+                    Code restructure for Daemon. Restructured the files, so there is a Calendar app and a separate Daemon
+                </p></td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/HaikuArchives/Calendar/pull/125" target="_blank">https://github.com/HaikuArchives/Calendar/pull/125</a></td>
+                <td><p>
+                    Removed dependence of the DBManager on the Main Application
+                </p></td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/HaikuArchives/Calendar/pull/126" target="_blank">https://github.com/HaikuArchives/Calendar/pull/126</a></td>
+                <td><p>
+                    Set up a basic daemon which node monitors the Events directory for events adding/removing.
+                </p></td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/HaikuArchives/Calendar/pull/127" target="_blank">https://github.com/HaikuArchives/Calendar/pull/127</a></td>
+                <td><p>
+                    UI change in Calendar and data model changes
+                </p></td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/HaikuArchives/Calendar/pull/128" target="_blank">https://github.com/HaikuArchives/Calendar/pull/128</a></td>
+                <td><p>
+                    Querying the DB for an updated list of events
+                </p></td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/HaikuArchives/Calendar/pull/129" target="_blank">https://github.com/HaikuArchives/Calendar/pull/129</a></td>
+                <td><p>
+                    Getting alerts at the right time using `BMessageRunner`
+                </p></td>
+            </tr>
+        </table>
+
+    </p>
+
+    <h2>What's next?</h2>
+
+    <p>
+        The work for Daemon is (almost) complete.<br>
+        What remains is: Automatically starting the CalendarDaemon with the help of `launch_daemon`. I would definitely complete this. <br><br>
+
+        I've decided to continue to contribute to open source in my spare time. And I'll continue to engage with the Haiku community as well. Projects here are really interesting!
+    </p>
+
+    <h1>Final Words</h1>
+
+    <p>
+        I had a great and very productive time working on this project. Thanks to this project, I have learnt many things about Haiku, git, and even C++! <br><br>
+
+        A special thanks to my mentors <a href="https://discuss.haiku-os.org/u/nielx" target="_blank">Niels Sascha Reedijk</a> and <a href="https://discuss.haiku-os.org/u/humdinger" target="_blank">Humdinger</a>. They mentored me really well and were always ready to help me out. Thanks for being patient with me and clarifying my doubts. <br><br>
+
+        Finally, I would like to thank this amazing community! <br><br>
+
+        Have a great day! <br><br>
+    </p>
+
+    <p style="font-size: 20px; color: #858585; text-align: right;">
+        ~ Harshit Sharma &lt;harshits908@gmail.com&gt;
+    </p>
+
+</body>
+</html>
